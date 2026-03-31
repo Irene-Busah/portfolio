@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irene Busah — Data Scientist & ML Engineer</title>
+  <meta name="description" content="Portfolio of Irene Busah — Data Scientist, ML Engineer, and competitive programmer building data-intensive scalable systems." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/cp.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+
+  <!-- Cursor styles (inline for immediate paint) -->
+  <style>
+    #cursor {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--neon);
+      position: fixed; pointer-events: none; z-index: 9999;
+      box-shadow: 0 0 10px var(--neon), 0 0 30px rgba(0,245,255,0.4);
+      transition: transform 0.1s;
+    }
+    #cursor-ring {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(0,245,255,0.5);
+      position: fixed; pointer-events: none; z-index: 9998;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    #bg-canvas {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0; opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-deco"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav>
+    <a href="#hero" class="nav-logo">IB<span>/</span>DEV</a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#research">research</a></li>
+      <li><a href="#competitive">cp</a></li>
+      <li><a href="#blog">blog</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <a href="mailto:i.busah123@gmail.com" class="nav-cta">HIRE ME</a>
+    <button class="nav-hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-eyebrow">// HELLO, WORLD — WELCOME TO MY SPACE</div>
+    <h1 class="hero-name">IRENE BUSAH</h1>
+    <div class="hero-role">
+      <span id="typed-role">Data Scientist</span><span class="cursor-blink"></span>
+    </div>
+    <div class="hero-micro">BUILDING DATA-INTENSIVE SCALABLE SYSTEMS · MICROSERVICES · ML PIPELINES</div>
+    <p class="hero-desc">
+      I design and build <strong>intelligent, scalable systems</strong> — from end-to-end ML pipelines
+      and data-intensive microservices to predictive analytics at scale. Passionate about
+      turning raw data into decisions and sharpening algorithms through competitive programming, every day.
+    </p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
+      <a href="#competitive" class="btn btn-secondary">CHALLENGE WALL</a>
+      <a href="https://docs.google.com/document/d/1qezbDZ5H6nNL4G3SGE1K7P9ZT49TK1b1pR6JnaRCTXA/edit?usp=sharing"
+         target="_blank" rel="noopener" class="btn btn-secondary">RESUME ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">3+</div>
+        <div class="stat-label">YRS EXPERIENCE</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="stat-repos">—</div>
+        <div class="stat-label">PUBLIC REPOS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">PROBLEMS SOLVED</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">CP TOPICS ACTIVE</div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 01 — ABOUT</span>
+        <h2 class="section-title">WHO I AM</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>Data Scientist & ML Engineer</strong> who builds things end-to-end —
+            from raw data ingestion and feature engineering through to model training, MLOps
+            pipelines, and production-ready backend systems.
+          </p>
+          <p>
+            A key focus of mine is <strong>data-intensive microservices</strong>: architecting
+            loosely coupled, highly scalable services that process high-throughput data streams
+            reliably. I care deeply about event-driven design, fault tolerance, and building
+            systems that stay elegant under load.
+          </p>
+          <p>
+            My background spans <strong>Machine Learning, Big Data, Deep Learning & Computer Vision</strong>,
+            and Engineering Scalable Data Systems — giving me full-lifecycle perspective across
+            data engineering, model development, and deployment.
+          </p>
+          <p>
+            Off the pipeline, I'm a <strong>competitive programmer</strong> grinding algorithms
+            daily — and a <strong>public speaker</strong> who believes the best engineers can
+            also communicate their work with clarity and conviction.
+          </p>
+        </div>
+        <div class="about-card reveal reveal-delay-2">
+          <div class="about-card-title">// QUICK PROFILE</div>
+          <div class="info-row">
+            <span class="info-label">ROLE</span>
+            <span class="info-value">Data Scientist & ML Engineer</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">SPECIALTY</span>
+            <span class="info-value">Scalable Data Systems · MLOps</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">ARCHITECTURE</span>
+            <span class="info-value">Microservices · Event-Driven</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">CURRENTLY</span>
+            <span class="info-value">Building AI-powered systems</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">OPEN TO</span>
+            <span class="info-value">ML · Data Eng · MLOps Roles</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">DAILY GRIND</span>
+            <span class="info-value">Competitive Programming 🏆</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">EMAIL</span>
+            <span class="info-value">i.busah123@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 02 — SKILLS</span>
+        <h2 class="section-title">TECH STACK</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-icon">🐍</div>
+          <div class="skill-cat-title">LANGUAGES</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python (Advanced)</span>
+            <span class="skill-tag">R (Intermediate)</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-cat-icon">🤖</div>
+          <div class="skill-cat-title">DATA SCIENCE & ML</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">SpaCy</span>
+            <span class="skill-tag">NLTK</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">Plotnine</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Grafana</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-cat-icon">🔁</div>
+          <div class="skill-cat-title">MLOPS & ORCHESTRATION</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MLflow</span>
+            <span class="skill-tag">Apache Airflow</span>
+            <span class="skill-tag">Prefect</span>
+            <span class="skill-tag">DVC</span>
+            <span class="skill-tag">DAGsHub</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-icon">📦</div>
+          <div class="skill-cat-title">BIG DATA & ETL</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Hadoop MapReduce</span>
+            <span class="skill-tag">ETL / ELT Design</span>
+            <span class="skill-tag">Data Migration</span>
+            <span class="skill-tag">Data Validation</span>
+            <span class="skill-tag">Data Cleaning</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-cat-icon">⚙️</div>
+          <div class="skill-cat-title">BACKEND & MICROSERVICES</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Event-Driven Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-cat-icon">☁️</div>
+          <div class="skill-cat-title">CLOUD & DEVOPS</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS (EC2 · S3 · IAM)</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Postman</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects">
+    <div class="section-wrap">
+      <div class="projects-header-row reveal">
+        <div class="section-header" style="margin-bottom:0">
+          <span class="section-tag">// 03 — PROJECTS</span>
+          <h2 class="section-title">WHAT I'VE BUILT</h2>
+          <div class="section-line"></div>
+        </div>
+        <a href="https://github.com/Irene-Busah" target="_blank" rel="noopener"
+           class="projects-github-link">→ EXPLORE ALL ON GITHUB</a>
+      </div>
+
+      <p class="projects-note reveal">
+        // Pulling live from GitHub. Every repo below is real and public.<br/>
+        // Click any project name or link to explore the code directly.
+      </p>
+
+      <div id="repos-container"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══ RESEARCH ═══ -->
+  <section id="research">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 04 — RESEARCH</span>
+        <h2 class="section-title">RESEARCH PROJECTS</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="research-grid">
+
+        <div class="research-card reveal">
+          <span class="research-status active">● ACTIVE</span>
+          <div class="research-title">TB Cough Detection via Deep Learning Audio Analysis</div>
+          <div class="research-venue">// CMU Africa · Healthcare AI Lab</div>
+          <div class="research-desc">
+            Developing a non-invasive TB screening system that analyzes cough recordings using CNNs and audio feature extraction (MFCCs, spectrograms) to generate risk scores. Designed for low-resource clinical settings where access to traditional diagnostics is limited.
+          </div>
+          <div class="research-tags">
+            <span class="research-tag">Deep Learning</span>
+            <span class="research-tag">Audio Analysis</span>
+            <span class="research-tag">CNN</span>
+            <span class="research-tag">Healthcare AI</span>
+            <span class="research-tag">TensorFlow</span>
+          </div>
+          <a href="https://github.com/Irene-Busah/TB-Cough-Analyzer-CMU" target="_blank" rel="noopener" class="research-link">VIEW REPO ↗</a>
+        </div>
+
+        <div class="research-card reveal reveal-delay-1">
+          <span class="research-status completed">✓ COMPLETED</span>
+          <div class="research-title">Burnout Severity Prediction Across Demographics</div>
+          <div class="research-venue">// Big Data Science · Academic Research</div>
+          <div class="research-desc">
+            Large-scale study applying predictive modelling and statistical analysis to identify key drivers of occupational burnout severity. Used distributed computing (Spark) to process survey data across multiple demographic cohorts and surface actionable insights.
+          </div>
+          <div class="research-tags">
+            <span class="research-tag">Predictive Modelling</span>
+            <span class="research-tag">Apache Spark</span>
+            <span class="research-tag">Statistics</span>
+            <span class="research-tag">Big Data</span>
+            <span class="research-tag">Python</span>
+          </div>
+          <a href="https://github.com/Irene-Busah/Big-Data-Science/tree/main/Projects/burnout-severity-research" target="_blank" rel="noopener" class="research-link">VIEW REPO ↗</a>
+        </div>
+
+        <div class="research-card reveal reveal-delay-2">
+          <span class="research-status completed">✓ COMPLETED</span>
+          <div class="research-title">Political Donation Patterns: A Big Data Analysis</div>
+          <div class="research-venue">// Big Data Science · Academic Research</div>
+          <div class="research-desc">
+            Analyzed millions of political donation records using Hadoop MapReduce to uncover geographic, temporal, and demographic patterns in campaign financing. Produced data-driven findings on donor behavior and PAC influence using large-scale ETL pipelines.
+          </div>
+          <div class="research-tags">
+            <span class="research-tag">Hadoop MapReduce</span>
+            <span class="research-tag">ETL Pipelines</span>
+            <span class="research-tag">Data Analysis</span>
+            <span class="research-tag">Python</span>
+            <span class="research-tag">Big Data</span>
+          </div>
+          <a href="https://github.com/Irene-Busah/Big-Data-Science/tree/main/Projects/political-donation-analysis" target="_blank" rel="noopener" class="research-link">VIEW REPO ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COMPETITIVE PROGRAMMING ═══ -->
+  <section id="competitive">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 05 — COMPETITIVE PROGRAMMING</span>
+        <h2 class="section-title">CHALLENGE WALL</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cp-intro reveal">
+        // Every problem is a puzzle waiting to be cracked.<br/>
+        // Below are problems I've personally solved — grouped by the patterns I'm actively grinding.<br/>
+        // Click <strong style="color:var(--neon3)">TRY IT</strong> on any card to attempt the problem yourself. The attempt count is live — you'll see how many other visitors have taken the challenge.
+      </div>
+
+      <!-- Stats -->
+      <div class="cp-stats-row reveal">
+        <div class="cp-stat-card">
+          <span class="cp-stat-num" id="cp-total">18+</span>
+          <span class="cp-stat-label">PROBLEMS LISTED</span>
+        </div>
+        <div class="cp-stat-card">
+          <span class="cp-stat-num" id="cp-topics">5</span>
+          <span class="cp-stat-label">ACTIVE TOPICS</span>
+        </div>
+        <div class="cp-stat-card">
+          <span class="cp-stat-num" id="cp-visitor-attempts">—</span>
+          <span class="cp-stat-label">VISITOR ATTEMPTS</span>
+        </div>
+        <div class="cp-stat-card">
+          <span class="cp-stat-num">∞</span>
+          <span class="cp-stat-label">DAILY GRIND</span>
+        </div>
+      </div>
+
+      <!-- Platforms -->
+      <div class="cp-platforms reveal">
+        <a href="https://leetcode.com/busah" target="_blank" rel="noopener" class="cp-platform">⚡ LEETCODE</a>
+        <a href="https://codeforces.com/profile/irenebusah" target="_blank" rel="noopener" class="cp-platform">🏆 CODEFORCES</a>
+        <a href="https://www.hackerrank.com/profile/@i_busah1" target="_blank" rel="noopener" class="cp-platform">💻 HACKERRANK</a>
+      </div>
+
+      <!-- Filters -->
+      <div class="challenge-wall-header reveal">
+        <div class="challenge-wall-title">// PROBLEMS I'VE CONQUERED — ATTEMPT THEM YOURSELF</div>
+        <div class="challenge-filters">
+          <button class="filter-btn active" data-topic="" data-diff="">ALL</button>
+          <button class="filter-btn" data-topic="sorting" data-diff="">SORTING</button>
+          <button class="filter-btn" data-topic="prefix" data-diff="">PREFIX SUM</button>
+          <button class="filter-btn" data-topic="twopointers" data-diff="">TWO POINTERS</button>
+          <button class="filter-btn" data-topic="sliding-fixed" data-diff="">FIXED WINDOW</button>
+          <button class="filter-btn" data-topic="sliding-dynamic" data-diff="">DYNAMIC WINDOW</button>
+          <button class="filter-btn" data-topic="" data-diff="easy">EASY</button>
+          <button class="filter-btn" data-topic="" data-diff="medium">MEDIUM</button>
+          <button class="filter-btn" data-topic="" data-diff="hard">HARD</button>
+        </div>
+      </div>
+
+      <div class="challenge-grid" id="challenge-grid"></div>
+
+      <div id="challenge-pagination"></div>
+
+      <div class="challenge-wall-footer reveal">
+        // Problems update automatically as I solve more on Codeforces.<br/>
+        // LeetCode problems are curated manually. Last synced: live.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BLOG ═══ -->
+  <section id="blog">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 06 — BLOG</span>
+        <h2 class="section-title">THOUGHTS & WRITINGS</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Weekly digest banner -->
+      <div class="blog-digest-banner reveal" id="blog-digest-banner"></div>
+
+      <!-- Filters -->
+      <div class="blog-filters reveal">
+        <button class="filter-btn blog-filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn blog-filter-btn" data-filter="writeup">WRITEUPS</button>
+        <button class="filter-btn blog-filter-btn" data-filter="longform">DEEP DIVES</button>
+      </div>
+
+      <div class="blog-grid" id="blog-grid"></div>
+
+      <div class="blog-coming reveal">
+        // Blog posts are in progress. Subscribe via the contact form to get notified when they drop.<br/>
+        // Also follow on <a href="https://linkedin.com/in/irene-busah" target="_blank" rel="noopener">LinkedIn ↗</a> for shorter weekly updates.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="section-wrap">
+      <div class="section-header reveal">
+        <span class="section-tag">// 07 — CONTACT</span>
+        <h2 class="section-title">LET'S CONNECT</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <p class="contact-intro">
+            Whether you want to collaborate on a data project, discuss an opportunity,
+            or just geek out about algorithms and scalable systems — my inbox is open.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:i.busah123@gmail.com" class="contact-link">
+              <span class="contact-link-icon">📧</span> i.busah123@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/irene-busah" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">💼</span> linkedin.com/in/irene-busah
+            </a>
+            <a href="https://github.com/Irene-Busah" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🐙</span> github.com/Irene-Busah
+            </a>
+            <a href="https://kaggle.com/irenebusah" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">📊</span> kaggle.com/irenebusah
+            </a>
+            <a href="https://leetcode.com/busah" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">⚡</span> leetcode.com/busah
+            </a>
+            <a href="https://codeforces.com/profile/irenebusah" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">🏆</span> codeforces.com/irenebusah
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal reveal-delay-2">
+          <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">// NAME</label>
+              <input type="text" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">// EMAIL</label>
+              <input type="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">// SUBJECT</label>
+              <input type="text" class="form-input" placeholder="Collaboration / Opportunity / Just saying hi" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">// MESSAGE</label>
+              <textarea class="form-textarea" placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="form-submit-btn">SEND MESSAGE →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-logo">IRENE BUSAH</div>
+    <ul class="footer-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#competitive">cp wall</a></li>
+      <li><a href="#blog">blog</a></li>
+    </ul>
+    <div class="footer-copy">© 2025 · Built with precision & passion</div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script type="module">
+    import { initCursor }        from './js/cursor.js';
+    import { initCanvas }        from './js/canvas.js';
+    import { initTypewriter, initReveal, initNav } from './js/typewriter.js';
+    import { initGitHub }        from './js/github.js';
+    import { initChallengeWall } from './js/leetcode.js';
+    import { initBlog }          from './js/blog.js';
+
+    // Boot
+    initCursor();
+    initCanvas();
+    initNav();
+    initReveal();
+    initTypewriter('typed-role', [
+      'Data Scientist',
+      'ML Engineer',
+      'Backend Developer',
+      'Microservices Architect',
+      'Competitive Programmer',
+      'Problem Solver',
+    ]);
+
+    initGitHub().then(() => {
+      // Update hero stat with real repo count
+      const cards = document.querySelectorAll('.repo-card');
+      const statEl = document.getElementById('stat-repos');
+      if (statEl && cards.length > 0) statEl.textContent = cards.length + '+';
+    });
+
+    initChallengeWall();
+    initBlog();
+
+    // Live visitor attempt counter
+    function updateVisitorAttempts() {
+      const data  = JSON.parse(localStorage.getItem('ib_challenge_attempts') || '{}');
+      const total = Object.values(data).reduce((a, b) => a + b, 0);
+      const el    = document.getElementById('cp-visitor-attempts');
+      if (el) el.textContent = total || '0';
+    }
+    updateVisitorAttempts();
+    window.addEventListener('storage', updateVisitorAttempts);
+
+ 

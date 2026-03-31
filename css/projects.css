@@ -1,0 +1,205 @@
+/* ═══════════════════
+   PROJECTS
+   ═══════════════════ */
+
+.projects-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projects-github-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.projects-github-link:hover {
+  color: var(--neon);
+  border-color: var(--neon);
+}
+
+.projects-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 2px solid var(--neon2);
+  background: rgba(123,47,255,0.05);
+}
+
+.github-repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.2rem;
+}
+
+/* GitHub API repo card */
+.repo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card:hover {
+  border-color: var(--neon);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), var(--glow-cyan);
+}
+
+.repo-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon), var(--neon2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+.repo-card:hover::before { transform: scaleX(1); }
+
+.repo-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.repo-icon { font-size: 1.1rem; }
+
+.repo-stars {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--neon-warn);
+  letter-spacing: 1px;
+}
+
+.repo-name {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  text-decoration: none;
+  display: block;
+  transition: color var(--transition);
+}
+.repo-name:hover { color: var(--neon); }
+
+.repo-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+.repo-lang {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.repo-lang-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--neon2);
+  flex-shrink: 0;
+}
+
+.repo-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--neon);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,245,255,0.3);
+  padding-bottom: 1px;
+  letter-spacing: 1px;
+  transition: opacity var(--transition);
+}
+.repo-link:hover { opacity: 0.7; }
+
+/* Loading state */
+.repos-loading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 2rem 0;
+}
+.loading-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--neon);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Error state */
+.repos-error {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 2rem;
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+.repos-error a {
+  color: var(--neon);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .github-repos-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Repo badge ── */
+.repo-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid rgba(0,245,255,0.3);
+  color: var(--neon);
+  letter-spacing: 1.5px;
+  background: rgba(0,245,255,0.06);
+}
+
+/* Highlight card (e.g. TB research) */
+.repo-card--highlight {
+  border-color: rgba(0,255,136,0.25);
+}
+.repo-card--highlight:hover {
+  border-color: var(--neon3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), var(--glow-green);
+}
+.repo-card--highlight::before {
+  background: linear-gradient(90deg, var(--neon3), var(--neon));
+}
