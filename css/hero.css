@@ -136,6 +136,19 @@
 
 @media (max-width: 768px) {
   #hero { padding: 7rem 1.5rem 4rem; }
-  .hero-stats { gap: 2rem; }
+  .hero-stats { gap: 1.5rem; }
   .hero-desc { text-align: left; }
+  .hero-micro {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats { gap: 1rem; }
+  .stat-number { font-size: 1.5rem; }
+  .stat-label { font-size: 0.55rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { text-align: center; }
 }

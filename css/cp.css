@@ -238,10 +238,21 @@
   border-top: 1px solid var(--border);
 }
 
+@media (max-width: 768px) {
+  .challenge-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .challenge-wall-header { flex-direction: column; align-items: flex-start; }
+}
+
 @media (max-width: 600px) {
   .challenge-grid { grid-template-columns: 1fr; }
   .cp-stats-row { grid-template-columns: repeat(2, 1fr); }
 }
+
 
 /* ── Pagination ── */
 #challenge-pagination {

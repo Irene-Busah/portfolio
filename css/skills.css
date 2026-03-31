@@ -128,4 +128,6 @@
 
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .info-value { text-align: left; }
+  .info-row { flex-wrap: wrap; gap: 0.3rem; }
 }

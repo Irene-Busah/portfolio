@@ -86,6 +86,21 @@ export function initNav() {
   const nav      = document.querySelector('nav');
   const links    = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section[id]');
+  const hamburger = document.querySelector('.nav-hamburger');
+
+  // Hamburger toggle
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('mobile-open');
+    });
+  }
+
+  // Close mobile menu when a link is clicked
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('mobile-open');
+    });
+  });
 
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);

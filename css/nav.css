@@ -91,4 +91,31 @@ nav.scrolled { padding: 0.8rem 3rem; }
   nav { padding: 1rem 1.5rem; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
+  /* Mobile menu open state */
+  nav.mobile-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    background: rgba(2, 8, 18, 0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem 2rem;
+    gap: 1.2rem;
+    z-index: 99;
+  }
+  nav.mobile-open .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+  nav.mobile-open .nav-cta {
+    display: block;
+    position: fixed;
+    top: 60px; left: 0; right: 0;
+    display: none; /* hidden — links suffice */
+  }
+  /* Hamburger → X animation */
+  nav.mobile-open .nav-hamburger span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  nav.mobile-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+  nav.mobile-open .nav-hamburger span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 }
